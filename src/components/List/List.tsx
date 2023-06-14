@@ -1,3 +1,5 @@
+import ListBtns from "../ListBtns/ListBtns";
+
 interface TaskProps {
   description: string;
   id: number;
@@ -12,8 +14,9 @@ const List = ({ tasks }: ListProps) => {
     <div className="task-ctn">
       <ul className="task-list">
         {tasks.map((task) => (
-          <li className="list-group-item" key={task.id}>
-            {task.description}
+          <li className="task-list-item" key={task.id}>
+            <p>{task.description}</p>
+            <ListBtns />
           </li>
         ))}
       </ul>
