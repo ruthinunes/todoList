@@ -1,10 +1,9 @@
 import Form from "./components/Form/Form";
 import List from "./components/List/List";
-import data from "../data/tasks.json";
 import { useState } from "react";
 
 function App() {
-  const [tasks, setTasks] = useState(data);
+  const [tasks, setTasks] = useState<{ id: number; description: string }[]>([]);
 
   return (
     <>
