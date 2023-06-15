@@ -22,7 +22,7 @@ const Form = ({ onSubmit }: FormProps) => {
 
       <div className="form-control">
         <input
-          {...register("description")}
+          {...register("description", { required: true })}
           type="text"
           id="form-task"
           placeholder="Write your task here"
