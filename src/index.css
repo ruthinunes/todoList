@@ -62,6 +62,10 @@ h3 {
 }
 
 /* form input */
+.form {
+  margin-bottom: 2rem;
+}
+
 .form-control {
   display: flex;
   justify-content: center;
@@ -95,10 +99,6 @@ h3 {
 }
 
 /* List */
-.task-ctn {
-  margin-top: 2rem;
-}
-
 .task-list-item {
   display: flex;
   align-items: center;
