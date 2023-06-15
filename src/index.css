@@ -70,6 +70,7 @@ h3 {
   display: flex;
   justify-content: center;
   gap: 1rem;
+  margin-bottom: 0.2rem;
 }
 
 .form-control input {
@@ -96,6 +97,11 @@ h3 {
 
 .form-btn:hover {
   background-color: var(--accent-color);
+}
+
+.form-erro-text {
+  color: red;
+  margin-left: 0.3rem;
 }
 
 /* List */
