@@ -2,18 +2,19 @@ import { AiFillEdit } from "react-icons/ai";
 import { FaTrash } from "react-icons/fa";
 
 interface BtnProps {
-  onDelete: () => void;
-  onEdit: () => void;
+  id: number;
+  onDelete: (id: number) => void;
+  onEdit: (id: number) => void;
 }
 
-const ListBtns = ({ onDelete, onEdit }: BtnProps) => {
+const ListBtns = ({ id, onDelete, onEdit }: BtnProps) => {
   return (
     <div className="list-btns-container">
-      <button onClick={onEdit}>
+      <button onClick={() => onEdit(id)}>
         <AiFillEdit size={21} />
       </button>
 
-      <button onClick={onDelete}>
+      <button onClick={() => onDelete(id)}>
         <FaTrash size={14} />
       </button>
     </div>
