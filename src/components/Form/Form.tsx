@@ -1,23 +1,26 @@
 import "../../index.css";
-import { FieldValues, useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 
-interface FormProps {
-  onSubmit: (data: FieldValues) => void;
+interface FormData {
+  onSubmit: (data: TaskProps) => void;
 }
 
-const Form = ({ onSubmit }: FormProps) => {
+interface TaskProps {
+  description: string;
+}
+
+const Form = ({ onSubmit }: FormData) => {
   const {
     register,
     handleSubmit,
     reset,
     formState: { errors },
-  } = useForm();
+  } = useForm<TaskProps>();
 
   return (
     <form
       className="form"
       onSubmit={handleSubmit((data) => {
-        console.log(onSubmit);
         onSubmit(data);
         reset();
       })}
