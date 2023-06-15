@@ -6,7 +6,12 @@ interface FormProps {
 }
 
 const Form = ({ onSubmit }: FormProps) => {
-  const { register, handleSubmit, reset } = useForm();
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
 
   return (
     <form
@@ -17,7 +22,7 @@ const Form = ({ onSubmit }: FormProps) => {
         reset();
       })}
     >
-      <p className="form-alert">ALERT</p>
+      {/* <p className="form-alert">ALERT</p> */}
       <h3>Todo List</h3>
 
       <div className="form-control">
@@ -31,6 +36,9 @@ const Form = ({ onSubmit }: FormProps) => {
           Submit
         </button>
       </div>
+      {errors.description?.type === "required" && (
+        <small className="form-erro-text">Task is required</small>
+      )}
     </form>
   );
 };
