@@ -9,9 +9,10 @@ interface ListProps {
   tasks: TaskProps[];
   onDelete: (id: number) => void;
   onEdit: (id: number) => void;
+  onClearAll: () => void;
 }
 
-const List = ({ tasks, onDelete, onEdit }: ListProps) => {
+const List = ({ tasks, onDelete, onEdit, onClearAll }: ListProps) => {
   if (tasks.length === 0) return null;
   return (
     <div className="task-ctn">
@@ -23,7 +24,9 @@ const List = ({ tasks, onDelete, onEdit }: ListProps) => {
           </li>
         ))}
       </ul>
-      <button className="clear-btn"> Clear All</button>
+      <button className="clear-btn" onClick={onClearAll}>
+        Clear All
+      </button>
     </div>
   );
 };
