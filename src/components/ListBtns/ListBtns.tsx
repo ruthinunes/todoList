@@ -1,13 +1,19 @@
 import { AiFillEdit } from "react-icons/ai";
-import { FaTrash } from 'react-icons/fa'
+import { FaTrash } from "react-icons/fa";
 
-const ListBtns = () => {
+interface BtnProps {
+  onDelete: () => void;
+  onEdit: () => void;
+}
+
+const ListBtns = ({ onDelete, onEdit }: BtnProps) => {
   return (
     <div className="list-btns-container">
-      <button>
-        <AiFillEdit size={21}/>
+      <button onClick={onEdit}>
+        <AiFillEdit size={21} />
       </button>
-      <button>
+
+      <button onClick={onDelete}>
         <FaTrash size={14} />
       </button>
     </div>
