@@ -37,27 +37,26 @@ body {
 
 /* alert */
 .form-alert {
-  margin-bottom: 1rem;
+  margin: 0 auto;
   height: 1.3rem;
   text-align: center;
   font-size: 1rem;
   border-radius: 0.25rem;
   text-transform: capitalize;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  background-color: var(--accent-color);
+  max-width: 200px;
+  color: var(--background-color);
 }
 
-.form-alert-danger {
-  color: #721c24;
-  background: #f8d7da;
-}
-
-.form-alert-success {
-  color: #155724;
-  background: #d4edda;
+.form-alert-visible {
+  opacity: 1;
 }
 
 h3 {
   color: var(--primary-color);
-  margin-bottom: 1.5rem;
+  margin: 1rem 0 1.5rem 0;
   text-align: center;
 }
 
