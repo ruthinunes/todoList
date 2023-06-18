@@ -19,7 +19,6 @@ function App() {
         <List
           tasks={tasks}
           onDelete={(id) => setTasks(tasks.filter((task) => task.id !== id))}
-          onEdit={(id) => console.log(id)}
           onClearAll={() => setTasks([])}
         />
       </div>
