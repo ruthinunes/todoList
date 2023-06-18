@@ -24,6 +24,13 @@ body {
   align-items: center;
 }
 
+h3 {
+  color: var(--primary-color);
+  margin: 1rem 0 1.5rem 0;
+  text-align: center;
+  font-size: 1.6rem;
+}
+
 .container {
   width: 90vw;
   margin: 0 auto;
@@ -54,14 +61,7 @@ body {
   opacity: 1;
 }
 
-h3 {
-  color: var(--primary-color);
-  margin: 1rem 0 1.5rem 0;
-  text-align: center;
-  font-size: 1.6rem;
-}
-
-/* form input */
+/* form */
 .form {
   margin-bottom: 2rem;
 }
@@ -121,13 +121,7 @@ h3 {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
-/* list item buttons */
-.list-btns-container {
-  display: flex;
-  gap: 1.3rem;
-}
-
-.list-btns-container button {
+.task-list-item button {
   background-color: transparent;
   cursor: pointer;
 }
@@ -136,6 +130,7 @@ button:hover svg {
   color: var(--background-color);
 }
 
+/* clear all btn */
 .clear-btn {
   width: 10rem;
   padding: 0.8rem 0;
